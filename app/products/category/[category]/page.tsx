@@ -14,7 +14,6 @@ export const metadata: Metadata = {
   description: "Jelajahi koleksi furnitur kami berdasarkan kategori",
 };
 
-// Dummy data produk (dalam implementasi nyata, data akan diambil dari API/database berdasarkan kategori)
 const products = [
   {
     id: 1,
@@ -44,6 +43,10 @@ export default function CategoryPage({ params }: CategoryPageProps) {
       product.category.toLowerCase() === decodedCategory.toLowerCase()
   );
 
+  const handleFilter = (category: string) => {
+    // Implementasikan logika filter di sini jika diperlukan
+  };
+
   return (
     <div className="container mx-auto px-4 py-12">
       <div className="bg-white rounded-xl shadow-lg p-8">
@@ -54,7 +57,7 @@ export default function CategoryPage({ params }: CategoryPageProps) {
         <div className="flex flex-col lg:flex-row gap-8">
           {/* Sidebar Filter */}
           <div className="lg:w-1/4">
-            <ProductFilter />
+            <ProductFilter onFilter={handleFilter} />
           </div>
           {/* Product List */}
           <div className="lg:w-3/4">

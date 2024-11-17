@@ -9,15 +9,17 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #4a4947;
+    --foreground: #faf7f0;
+    --primary: #b17457;
+    --secondary: #d8d2c2;
   }
 }
 
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Comfortaa";
 }
 
 @layer utilities {
